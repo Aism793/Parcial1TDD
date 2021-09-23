@@ -83,7 +83,7 @@ namespace ProductoSolutionTDD
         Dado El cliente va a comprar un producto 
         Id 1, Nombre “Gaseosa”, Categoria "VentaDirecta"
         Cuando Va a ingresar una cantidad -1
-        Entonces El sistema presentará el mensaje. “La cantidad a ingresar es incorrecta”
+        Entonces El sistema presentará el mensaje. “La cantidad a vender es incorrecta”
          */
         [Test]
         public void NoPuedeVenderCantidadProductosDeMenosUno()
@@ -91,29 +91,37 @@ namespace ProductoSolutionTDD
             var productoCompuesto = new ProductoCompuesto(id: "1", nombre: "Gaseosa", categoria: "VENTADIRECTA", costo: 2000, precio: 5000);
             int cantidadProducto = -1;
             string respuesta = productoCompuesto.Vender(cantidadProducto: cantidadProducto);
-            Assert.AreEqual("La cantidad a ingresar es incorrecta", respuesta);
+            Assert.AreEqual("La cantidad a vender es incorrecta", respuesta);
         }
     }
 
     internal class ProductoCompuesto
     {
-        private string id;
-        private string nombre;
-        private string categoria;
-        private int costo;
-        private int precio;
+        //protected List<MovimientoCuenta> _movimientos;
+        public string Id { get; private set; }
+        public string Nombre { get; private set; }
+        public string Categoria { get; private set; }
+        public decimal Costo { get; private set; }
+        public decimal Precio { get; private set; }
+        public decimal Utilidad { get; private set; }
+        public int Cantidad { get; protected set; }
 
-        public ProductoCompuesto(string id, string nombre, string categoria, int costo, int precio)
+        public ProductoCompuesto(string id, string nombre, string categoria, decimal costo, decimal precio)
         {
-            this.id = id;
-            this.nombre = nombre;
-            this.categoria = categoria;
-            this.costo = costo;
-            this.precio = precio;
+            Id = id;
+            Nombre = nombre;
+            Categoria = categoria;
+            Costo = costo;
+            Precio = precio;
+            Utilidad = precio - costo;
         }
 
         internal string Vender(int cantidadProducto)
         {
+            if (cantidadProducto < 0)
+            {
+                return "La cantidad a vender es incorrecta";
+            }
             throw new NotImplementedException();
         }
     }
