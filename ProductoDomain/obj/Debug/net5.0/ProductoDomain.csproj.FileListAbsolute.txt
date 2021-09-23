@@ -1,0 +1,12 @@
+D:\IsmaPCBlanco\Documentos\ISMA\Semestre 2021-2\Diseño dirigido por pruebas\Proyectos\Parcial\ProductoSolutionTDD\ProductoDomain\bin\Debug\net5.0\ProductoDomain.deps.json
+D:\IsmaPCBlanco\Documentos\ISMA\Semestre 2021-2\Diseño dirigido por pruebas\Proyectos\Parcial\ProductoSolutionTDD\ProductoDomain\bin\Debug\net5.0\ProductoDomain.dll
+D:\IsmaPCBlanco\Documentos\ISMA\Semestre 2021-2\Diseño dirigido por pruebas\Proyectos\Parcial\ProductoSolutionTDD\ProductoDomain\bin\Debug\net5.0\ref\ProductoDomain.dll
+D:\IsmaPCBlanco\Documentos\ISMA\Semestre 2021-2\Diseño dirigido por pruebas\Proyectos\Parcial\ProductoSolutionTDD\ProductoDomain\bin\Debug\net5.0\ProductoDomain.pdb
+D:\IsmaPCBlanco\Documentos\ISMA\Semestre 2021-2\Diseño dirigido por pruebas\Proyectos\Parcial\ProductoSolutionTDD\ProductoDomain\obj\Debug\net5.0\ProductoDomain.csproj.AssemblyReference.cache
+D:\IsmaPCBlanco\Documentos\ISMA\Semestre 2021-2\Diseño dirigido por pruebas\Proyectos\Parcial\ProductoSolutionTDD\ProductoDomain\obj\Debug\net5.0\ProductoDomain.GeneratedMSBuildEditorConfig.editorconfig
+D:\IsmaPCBlanco\Documentos\ISMA\Semestre 2021-2\Diseño dirigido por pruebas\Proyectos\Parcial\ProductoSolutionTDD\ProductoDomain\obj\Debug\net5.0\ProductoDomain.AssemblyInfoInputs.cache
+D:\IsmaPCBlanco\Documentos\ISMA\Semestre 2021-2\Diseño dirigido por pruebas\Proyectos\Parcial\ProductoSolutionTDD\ProductoDomain\obj\Debug\net5.0\ProductoDomain.AssemblyInfo.cs
+D:\IsmaPCBlanco\Documentos\ISMA\Semestre 2021-2\Diseño dirigido por pruebas\Proyectos\Parcial\ProductoSolutionTDD\ProductoDomain\obj\Debug\net5.0\ProductoDomain.csproj.CoreCompileInputs.cache
+D:\IsmaPCBlanco\Documentos\ISMA\Semestre 2021-2\Diseño dirigido por pruebas\Proyectos\Parcial\ProductoSolutionTDD\ProductoDomain\obj\Debug\net5.0\ProductoDomain.dll
+D:\IsmaPCBlanco\Documentos\ISMA\Semestre 2021-2\Diseño dirigido por pruebas\Proyectos\Parcial\ProductoSolutionTDD\ProductoDomain\obj\Debug\net5.0\ref\ProductoDomain.dll
+D:\IsmaPCBlanco\Documentos\ISMA\Semestre 2021-2\Diseño dirigido por pruebas\Proyectos\Parcial\ProductoSolutionTDD\ProductoDomain\obj\Debug\net5.0\ProductoDomain.pdb

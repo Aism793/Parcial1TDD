@@ -99,3 +99,6 @@ D:\IsmaPCBlanco\Documentos\ISMA\Semestre 2021-2\Diseño dirigido por pruebas\Pro
 D:\IsmaPCBlanco\Documentos\ISMA\Semestre 2021-2\Diseño dirigido por pruebas\Proyectos\Parcial\ProductoSolutionTDD\ProductoSolutionTDD\obj\Debug\net5.0\ref\ProductoSolutionTDD.dll
 D:\IsmaPCBlanco\Documentos\ISMA\Semestre 2021-2\Diseño dirigido por pruebas\Proyectos\Parcial\ProductoSolutionTDD\ProductoSolutionTDD\obj\Debug\net5.0\ProductoSolutionTDD.pdb
 D:\IsmaPCBlanco\Documentos\ISMA\Semestre 2021-2\Diseño dirigido por pruebas\Proyectos\Parcial\ProductoSolutionTDD\ProductoSolutionTDD\obj\Debug\net5.0\ProductoSolutionTDD.genruntimeconfig.cache
+D:\IsmaPCBlanco\Documentos\ISMA\Semestre 2021-2\Diseño dirigido por pruebas\Proyectos\Parcial\ProductoSolutionTDD\ProductoSolutionTDD\bin\Debug\net5.0\CoverletSourceRootsMapping
+D:\IsmaPCBlanco\Documentos\ISMA\Semestre 2021-2\Diseño dirigido por pruebas\Proyectos\Parcial\ProductoSolutionTDD\ProductoSolutionTDD\bin\Debug\net5.0\ProductoDomain.dll
+D:\IsmaPCBlanco\Documentos\ISMA\Semestre 2021-2\Diseño dirigido por pruebas\Proyectos\Parcial\ProductoSolutionTDD\ProductoSolutionTDD\bin\Debug\net5.0\ProductoDomain.pdb
