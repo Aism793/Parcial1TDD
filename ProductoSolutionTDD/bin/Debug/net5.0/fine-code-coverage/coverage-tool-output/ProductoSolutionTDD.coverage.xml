@@ -1,12 +1,106 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<coverage line-rate="0.9411" branch-rate="0.6666" version="1.9" timestamp="1632417518" lines-covered="64" lines-valid="68" branches-covered="4" branches-valid="6">
+<coverage line-rate="0.9411" branch-rate="0.6666" version="1.9" timestamp="1632417605" lines-covered="64" lines-valid="68" branches-covered="4" branches-valid="6">
   <sources>
     <source>D:\IsmaPCBlanco\Documentos\ISMA\Semestre 2021-2\Diseño dirigido por pruebas\Proyectos\Parcial\ProductoSolutionTDD\</source>
     <source>C:\</source>
   </sources>
   <packages>
-    <package name="ProductoDomain" line-rate="0.9615" branch-rate="0.75" complexity="12">
+    <package name="ProductoDomain" line-rate="0.9375" branch-rate="0.6666" complexity="22">
       <classes>
+        <class name="ProductoDomain.ProductoCompuesto" filename="ProductoDomain\ProductoCompuesto.cs" line-rate="0.909" branch-rate="0.5" complexity="10">
+          <methods>
+            <method name="get_Id" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="12" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Nombre" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="13" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Categoria" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="14" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Costo" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="15" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Precio" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="16" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Utilidad" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="17" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Cantidad" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="18" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="Vender" signature="(System.Int32)" line-rate="0.8332999999999999" branch-rate="0.5" complexity="2">
+              <lines>
+                <line number="31" hits="1" branch="False" />
+                <line number="32" hits="1" branch="True" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="7" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="33" hits="1" branch="False" />
+                <line number="34" hits="1" branch="False" />
+                <line number="36" hits="0" branch="False" />
+                <line number="37" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(System.String,System.String,System.String,System.Decimal,System.Decimal)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="20" hits="1" branch="False" />
+                <line number="21" hits="1" branch="False" />
+                <line number="22" hits="1" branch="False" />
+                <line number="23" hits="1" branch="False" />
+                <line number="24" hits="1" branch="False" />
+                <line number="25" hits="1" branch="False" />
+                <line number="26" hits="1" branch="False" />
+                <line number="27" hits="1" branch="False" />
+                <line number="28" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="12" hits="1" branch="False" />
+            <line number="13" hits="1" branch="False" />
+            <line number="14" hits="1" branch="False" />
+            <line number="15" hits="1" branch="False" />
+            <line number="16" hits="1" branch="False" />
+            <line number="17" hits="1" branch="False" />
+            <line number="18" hits="0" branch="False" />
+            <line number="31" hits="1" branch="False" />
+            <line number="32" hits="1" branch="True" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="7" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="33" hits="1" branch="False" />
+            <line number="34" hits="1" branch="False" />
+            <line number="36" hits="0" branch="False" />
+            <line number="37" hits="1" branch="False" />
+            <line number="20" hits="1" branch="False" />
+            <line number="21" hits="1" branch="False" />
+            <line number="22" hits="1" branch="False" />
+            <line number="23" hits="1" branch="False" />
+            <line number="24" hits="1" branch="False" />
+            <line number="25" hits="1" branch="False" />
+            <line number="26" hits="1" branch="False" />
+            <line number="27" hits="1" branch="False" />
+            <line number="28" hits="1" branch="False" />
+          </lines>
+        </class>
         <class name="ProductoDomain.ProductoSimple" filename="ProductoDomain\ProductoSimple.cs" line-rate="0.9615" branch-rate="0.75" complexity="12">
           <methods>
             <method name="get_Id" signature="()" line-rate="1" branch-rate="1" complexity="1">
@@ -119,7 +213,7 @@
         </class>
       </classes>
     </package>
-    <package name="ProductoSolutionTDD" line-rate="0.9285" branch-rate="0.5" complexity="14">
+    <package name="ProductoSolutionTDD" line-rate="0.95" branch-rate="1" complexity="4">
       <classes>
         <class name="AutoGeneratedProgram" filename="Users\USER\.nuget\packages\microsoft.net.test.sdk\16.9.4\build\netcoreapp2.1\Microsoft.NET.Test.Sdk.Program.cs" line-rate="0" branch-rate="1" complexity="1">
           <methods>
@@ -187,100 +281,6 @@
             <line number="93" hits="1" branch="False" />
             <line number="94" hits="1" branch="False" />
             <line number="95" hits="1" branch="False" />
-          </lines>
-        </class>
-        <class name="ProductoSolutionTDD.ProductoCompuesto" filename="ProductoSolutionTDD\ProductoSolutionTest.cs" line-rate="0.909" branch-rate="0.5" complexity="10">
-          <methods>
-            <method name="get_Id" signature="()" line-rate="1" branch-rate="1" complexity="1">
-              <lines>
-                <line number="101" hits="1" branch="False" />
-              </lines>
-            </method>
-            <method name="get_Nombre" signature="()" line-rate="1" branch-rate="1" complexity="1">
-              <lines>
-                <line number="102" hits="1" branch="False" />
-              </lines>
-            </method>
-            <method name="get_Categoria" signature="()" line-rate="1" branch-rate="1" complexity="1">
-              <lines>
-                <line number="103" hits="1" branch="False" />
-              </lines>
-            </method>
-            <method name="get_Costo" signature="()" line-rate="1" branch-rate="1" complexity="1">
-              <lines>
-                <line number="104" hits="1" branch="False" />
-              </lines>
-            </method>
-            <method name="get_Precio" signature="()" line-rate="1" branch-rate="1" complexity="1">
-              <lines>
-                <line number="105" hits="1" branch="False" />
-              </lines>
-            </method>
-            <method name="get_Utilidad" signature="()" line-rate="1" branch-rate="1" complexity="1">
-              <lines>
-                <line number="106" hits="1" branch="False" />
-              </lines>
-            </method>
-            <method name="get_Cantidad" signature="()" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="107" hits="0" branch="False" />
-              </lines>
-            </method>
-            <method name="Vender" signature="(System.Int32)" line-rate="0.8332999999999999" branch-rate="0.5" complexity="2">
-              <lines>
-                <line number="120" hits="1" branch="False" />
-                <line number="121" hits="1" branch="True" condition-coverage="50% (1/2)">
-                  <conditions>
-                    <condition number="7" type="jump" coverage="50%" />
-                  </conditions>
-                </line>
-                <line number="122" hits="1" branch="False" />
-                <line number="123" hits="1" branch="False" />
-                <line number="125" hits="0" branch="False" />
-                <line number="126" hits="1" branch="False" />
-              </lines>
-            </method>
-            <method name=".ctor" signature="(System.String,System.String,System.String,System.Decimal,System.Decimal)" line-rate="1" branch-rate="1" complexity="1">
-              <lines>
-                <line number="109" hits="1" branch="False" />
-                <line number="110" hits="1" branch="False" />
-                <line number="111" hits="1" branch="False" />
-                <line number="112" hits="1" branch="False" />
-                <line number="113" hits="1" branch="False" />
-                <line number="114" hits="1" branch="False" />
-                <line number="115" hits="1" branch="False" />
-                <line number="116" hits="1" branch="False" />
-                <line number="117" hits="1" branch="False" />
-              </lines>
-            </method>
-          </methods>
-          <lines>
-            <line number="101" hits="1" branch="False" />
-            <line number="102" hits="1" branch="False" />
-            <line number="103" hits="1" branch="False" />
-            <line number="104" hits="1" branch="False" />
-            <line number="105" hits="1" branch="False" />
-            <line number="106" hits="1" branch="False" />
-            <line number="107" hits="0" branch="False" />
-            <line number="120" hits="1" branch="False" />
-            <line number="121" hits="1" branch="True" condition-coverage="50% (1/2)">
-              <conditions>
-                <condition number="7" type="jump" coverage="50%" />
-              </conditions>
-            </line>
-            <line number="122" hits="1" branch="False" />
-            <line number="123" hits="1" branch="False" />
-            <line number="125" hits="0" branch="False" />
-            <line number="126" hits="1" branch="False" />
-            <line number="109" hits="1" branch="False" />
-            <line number="110" hits="1" branch="False" />
-            <line number="111" hits="1" branch="False" />
-            <line number="112" hits="1" branch="False" />
-            <line number="113" hits="1" branch="False" />
-            <line number="114" hits="1" branch="False" />
-            <line number="115" hits="1" branch="False" />
-            <line number="116" hits="1" branch="False" />
-            <line number="117" hits="1" branch="False" />
           </lines>
         </class>
       </classes>
