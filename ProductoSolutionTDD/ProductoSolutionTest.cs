@@ -51,7 +51,7 @@ namespace ProductoSolutionTDD
         {
             var productoSimple = new ProductoSimple(id: "1", nombre: "Gaseosa", categoria: "VENTADIRECTA", costo: 2000, precio: 5000);
             int cantidadProducto = 50;
-             productoSimple.Ingresar(cantidadProducto: cantidadProducto);
+            productoSimple.Ingresar(cantidadProducto: cantidadProducto);
             string respuesta = productoSimple.Ingresar(cantidadProducto: 30);
             Assert.AreEqual("La cantidad actual del producto es 80", respuesta);
         }
@@ -75,7 +75,7 @@ namespace ProductoSolutionTDD
          */
         /*
         /*
-        Escenario: Valor de ingreso -1
+        Escenario: Valor de venta -1
         H1: (3.5) COMO USUARIO QUIERO REGISTRAR LA SALIDA PRODUCTOS   
         Criterio de Aceptación:
         1. La cantidad de la salida de debe ser mayor a 0 
@@ -92,6 +92,33 @@ namespace ProductoSolutionTDD
             int cantidadProducto = -1;
             string respuesta = productoCompuesto.Vender(cantidadProducto: cantidadProducto);
             Assert.AreEqual("La cantidad a vender es incorrecta", respuesta);
+        }
+
+        /*
+        Escenario: Valor de venta 2 Producto sencillo
+        H1: (3.5) COMO USUARIO QUIERO REGISTRAR LA SALIDA PRODUCTOS   
+        Criterio de Aceptación:
+        1. La cantidad de la salida de debe ser mayor a 0 
+        2. En caso de un producto sencillo la cantidad de la salida se le disminuirá a la cantidad existente 
+        del producto. 
+        //El ejemplo o escenario
+        Dado El cliente va a comprar un producto 
+        Id 1, Nombre “Gaseosa”, Categoria "VentaDirecta", Cantidad 30
+        Cuando Va a ingresar una cantidad 2
+        Entonces El sistema disminuirá la cantidad de dicho producto
+        and presentará el mensaje. “La cantidad actual del producto es 28”
+         */
+        [Test]
+        public void PuedeVenderCantidadProductoSencilloCorrecta()
+        {
+            var productoSimple = new ProductoSimple(id: "1", nombre: "Gaseosa", categoria: "VENTADIRECTA", costo: 2000, precio: 5000);
+            int cantidadProducto = 30;
+            productoSimple.Ingresar(cantidadProducto: cantidadProducto);
+
+            var productoCompuesto = new ProductoCompuesto(id: "1", nombre: "Gaseosa", categoria: "VENTADIRECTA", costo: 2000, precio: 5000);
+            int cantidadVenta = 2;
+            string respuesta = productoCompuesto.Vender(cantidadProducto: cantidadVenta);
+            Assert.AreEqual("La cantidad actual del producto es 28", respuesta);
         }
     }
 
