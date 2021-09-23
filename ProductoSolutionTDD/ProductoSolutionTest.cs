@@ -40,18 +40,19 @@ namespace ProductoSolutionTDD
         2. La cantidad de la entrada se le aumentará a la cantidad existente del producto
         //El ejemplo o escenario
         Dado El cliente tiene un producto 
-        Id 1, Nombre “Salchicha”, Categoria "Preparacion"
-        Cuando Va a ingresar una cantidad 50
+        Id 1, Nombre “Salchicha”, Categoria "Preparacion", Cantidad 50
+        Cuando Va a ingresar una cantidad 30
         Entonces El sistema la sumará a la cantidad existente
-        and presentará el mensaje. “La cantidad actual del producto es 50”
+        and presentará el mensaje. “La cantidad actual del producto es 80”
          */
         [Test]
         public void PuedeIngresarCantidadProductosCincuentaCorrecta()
         {
             var productoSimple = new ProductoSimple(id: "1", nombre: "Salchicha", categoria: "PREPARACION");
             int cantidadProducto = 50;
-            string respuesta = productoSimple.Ingresar(cantidadProducto: cantidadProducto);
-            Assert.AreEqual("La cantidad actual del producto es 50", respuesta);
+             productoSimple.Ingresar(cantidadProducto: cantidadProducto);
+            string respuesta = productoSimple.Ingresar(cantidadProducto: 30);
+            Assert.AreEqual("La cantidad actual del producto es 80", respuesta);
         }
     }
 
