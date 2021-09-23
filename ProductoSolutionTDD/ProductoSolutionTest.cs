@@ -1,6 +1,7 @@
 using NUnit.Framework;
 using ProductoDomain;
 using System;
+using System.Collections.Generic;
 
 namespace ProductoSolutionTDD
 {
@@ -27,7 +28,7 @@ namespace ProductoSolutionTDD
         [Test]
         public void NoPuedeIngresarCantidadProductosDeMenosUno()
         {
-            var productoSimple = new ProductoSimple(id: "1", nombre: "Gaseosa", categoria: "VENTADIRECTA", costo: 2000, precio: 5000);
+            var productoSimple = new ProductoSimple(id: "1", nombre: "Gaseosa", categoria: "VENTADIRECTA");
             int cantidadProducto = -1;
             string respuesta = productoSimple.Ingresar(cantidadProducto: cantidadProducto);
             Assert.AreEqual("La cantidad a ingresar es incorrecta", respuesta);
@@ -49,7 +50,7 @@ namespace ProductoSolutionTDD
         [Test]
         public void PuedeIngresarCantidadProductosCincuentaCorrecta()
         {
-            var productoSimple = new ProductoSimple(id: "1", nombre: "Gaseosa", categoria: "VENTADIRECTA", costo: 2000, precio: 5000);
+            var productoSimple = new ProductoSimple(id: "1", nombre: "Gaseosa", categoria: "VENTADIRECTA");
             int cantidadProducto = 50;
             productoSimple.Ingresar(cantidadProducto: cantidadProducto);
             string respuesta = productoSimple.Ingresar(cantidadProducto: 30);
@@ -88,9 +89,9 @@ namespace ProductoSolutionTDD
         [Test]
         public void NoPuedeVenderCantidadProductosDeMenosUno()
         {
-            var productoCompuesto = new ProductoCompuesto(id: "1", nombre: "Gaseosa", categoria: "VENTADIRECTA", costo: 2000, precio: 5000);
+            var productoSimple = new ProductoCompuesto(id: "1", nombre: "Gaseosa", categoria: "VENTADIRECTA");
             int cantidadProducto = -1;
-            string respuesta = productoCompuesto.Vender(cantidadProducto: cantidadProducto);
+            string respuesta = productoSimple.Vender(cantidadProducto: cantidadProducto, precio: 5000);
             Assert.AreEqual("La cantidad a vender es incorrecta", respuesta);
         }
 
@@ -111,13 +112,46 @@ namespace ProductoSolutionTDD
         [Test]
         public void PuedeVenderCantidadProductoSencilloCorrecta()
         {
-            var productoSimple = new ProductoSimple(id: "1", nombre: "Gaseosa", categoria: "VENTADIRECTA", costo: 2000, precio: 5000);
+            var productoSimple = new ProductoSimple(id: "1", nombre: "Gaseosa", categoria: "VENTADIRECTA");
             int cantidadProducto = 30;
             productoSimple.Ingresar(cantidadProducto: cantidadProducto);
 
-            var productoCompuesto = new ProductoCompuesto(id: "1", nombre: "Gaseosa", categoria: "VENTADIRECTA", costo: 2000, precio: 5000);
+             int cantidadVenta = 2;
+            string respuesta = productoSimple.Vender(cantidadProducto: cantidadVenta, costo: 2000, precio: 5000);
+            Assert.AreEqual("La cantidad actual del producto es 28", respuesta);
+        }
+
+        /*
+       Escenario: Valor de venta 2 Producto compuesto
+       H1: (3.5) COMO USUARIO QUIERO REGISTRAR LA SALIDA PRODUCTOS   
+       Criterio de Aceptación:
+       1. La cantidad de la salida de debe ser mayor a 0 
+       3. En caso de un producto compuesto la cantidad de la salida se le disminuirá a la cantidad existente 
+        de cada uno de su ingrediente 
+       //El ejemplo o escenario
+       Dado El cliente va a comprar un producto 
+       Id 2, Nombre “Perro Sencillo”, Categoria "Preparado"
+       Cuando Va a vender una cantidad 2
+       Entonces El sistema disminuirá la cantidad de los productos necesarios para su elaboración
+       and presentará el mensaje. “La cantidad actual del producto es 28”
+        */
+        [Test]
+        public void PuedeVenderCantidadProductoCompuestoCorrecta()
+        {
+            List<ProductoSimple> productosSimples = new List<ProductoSimple>();
+            var salchicha = new ProductoSimple(id: "1", nombre: "Salchicha", categoria: "PREPARACION");
+            salchicha.Ingresar(cantidadProducto: 30);
+            var panPerro = new ProductoSimple(id: "2", nombre: "PanPerros", categoria: "PREPARACION");
+            salchicha.Ingresar(cantidadProducto: 30);
+            var laminaQueso = new ProductoSimple(id: "3", nombre: "LaminaQueso", categoria: "PREPARACION");
+            salchicha.Ingresar(cantidadProducto: 30);
+            productosSimples.Add(salchicha);
+            productosSimples.Add(panPerro);
+            productosSimples.Add(laminaQueso);
+
+            var productoCompuesto = new ProductoCompuesto(id: "4", nombre: "Perro sencillo", categoria: "PREPARADOS");
             int cantidadVenta = 2;
-            string respuesta = productoCompuesto.Vender(cantidadProducto: cantidadVenta);
+            string respuesta = productoCompuesto.Vender(cantidadProducto: cantidadVenta, precio: 5000);
             Assert.AreEqual("La cantidad actual del producto es 28", respuesta);
         }
     }

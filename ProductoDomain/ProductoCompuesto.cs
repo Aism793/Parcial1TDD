@@ -17,22 +17,21 @@ namespace ProductoDomain
         public decimal Utilidad { get; private set; }
         public int Cantidad { get; protected set; }
 
-        public ProductoCompuesto(string id, string nombre, string categoria, decimal costo, decimal precio)
+        public ProductoCompuesto(string id, string nombre, string categoria)
         {
             Id = id;
             Nombre = nombre;
             Categoria = categoria;
-            Costo = costo;
-            Precio = precio;
-            Utilidad = precio - costo;
+
         }
 
-        public string Vender(int cantidadProducto)
+        public string Vender(int cantidadProducto, decimal precio)
         {
             if (cantidadProducto < 0)
             {
                 return "La cantidad a vender es incorrecta";
             }
+            
             throw new NotImplementedException();
         }
     }
