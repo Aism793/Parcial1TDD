@@ -8,7 +8,7 @@ namespace ProductoDomain
 {
     public class ProductoSimple
     {
-        protected List<ProductoSimple> _movimientos;
+        public static List<ProductoSimple> _movimientos;
         public string Id { get; private set; }
         public string Nombre { get; private set; }
         public string Categoria { get; private set; }
@@ -17,15 +17,19 @@ namespace ProductoDomain
         public decimal Utilidad { get; private set; }
         public int Cantidad { get; protected set; }
 
-        public ProductoSimple(string id, string nombre, string categoria)
+        public ProductoSimple(string id, string nombre, string categoria, decimal costo, decimal precio)
         {
             Id = id;
             Nombre = nombre;
             Categoria = categoria;
+            Costo = costo;
+            Precio = precio;
+            Utilidad = Precio - Costo;
+            _movimientos = new List<ProductoSimple>();
         }
-        public IReadOnlyCollection<ProductoSimple> Movimientos => _movimientos.AsReadOnly();
+        public IReadOnlyCollection<ProductoSimple> Productos => _movimientos.AsReadOnly();
 
-        public string Ingresar(int cantidadProducto)
+        public string Ingresar(int cantidadProducto, ProductoSimple producto)
         {
             if (cantidadProducto <= 0)
             {
@@ -33,13 +37,14 @@ namespace ProductoDomain
             }
             if (cantidadProducto > 0)
             {
+                _movimientos.Add(producto);
                 Cantidad += cantidadProducto;
                 return $"La cantidad actual del producto es {Cantidad}";
             }
             throw new NotImplementedException();
         }
 
-        public string Vender(int cantidadProducto, decimal costo, decimal precio)
+        public string Vender(int cantidadProducto)
         {
             if (cantidadProducto <= 0)
             {
@@ -47,13 +52,22 @@ namespace ProductoDomain
             }
             if (cantidadProducto > 0)
             {
-                Costo = costo;
-                Precio = precio;
-                Utilidad = Precio - Costo;
+
                 Cantidad -= cantidadProducto;
                 return $"La cantidad actual del producto es {Cantidad}";
             }
                 throw new NotImplementedException();
+        }
+
+        public static void Disminuir(string nombre)
+        {
+            foreach (ProductoSimple p in _movimientos)
+            {
+                if (p.Nombre.Equals(nombre))
+                {
+                    p.Cantidad -= 1;
+                }
+            }
         }
     }
 }
