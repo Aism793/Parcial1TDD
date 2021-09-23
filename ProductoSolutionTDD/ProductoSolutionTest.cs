@@ -27,7 +27,7 @@ namespace ProductoSolutionTDD
         public void NoPuedeIngresarCantidadProductosDeMenosUno()
         {
             var productoSimple = new ProductoSimple(id: "1", nombre: "Salchicha", categoria: "PREPARACION");
-            decimal cantidadProducto = -1;
+            int cantidadProducto = -1;
             string respuesta = productoSimple.Ingresar(cantidadProducto: cantidadProducto);
             Assert.AreEqual("La cantidad a ingresar es incorrecta", respuesta);
         }
@@ -49,7 +49,7 @@ namespace ProductoSolutionTDD
         public void PuedeIngresarCantidadProductosCincuentaCorrecta()
         {
             var productoSimple = new ProductoSimple(id: "1", nombre: "Salchicha", categoria: "PREPARACION");
-            decimal cantidadProducto = 50;
+            int cantidadProducto = 50;
             string respuesta = productoSimple.Ingresar(cantidadProducto: cantidadProducto);
             Assert.AreEqual("La cantidad actual del producto es 50", respuesta);
         }
@@ -73,13 +73,17 @@ namespace ProductoSolutionTDD
             Categoria = categoria;
         }
 
-        internal string Ingresar(decimal cantidadProducto)
+        internal string Ingresar(int cantidadProducto)
         {
-            if (cantidadProducto < 0)
+            if (cantidadProducto <= 0)
             {
                 return "La cantidad a ingresar es incorrecta";
             }
-            
+            if (cantidadProducto > 0)
+            {
+                Cantidad += cantidadProducto;
+                return $"La cantidad actual del producto es {Cantidad}";
+            }
             throw new NotImplementedException();
         }
     }
