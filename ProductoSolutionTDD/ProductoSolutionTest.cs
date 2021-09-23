@@ -29,7 +29,29 @@ namespace ProductoSolutionTDD
             var productoSimple = new ProductoSimple(id: "1", nombre: "Salchicha", categoria: "PREPARACION");
             decimal cantidadProducto = -1;
             string respuesta = productoSimple.Ingresar(cantidadProducto: cantidadProducto);
-            Assert.AreEqual("El valor a ingresar es incorrecta", respuesta);
+            Assert.AreEqual("La cantidad a ingresar es incorrecta", respuesta);
+        }
+
+        /*
+        Escenario: Valor de ingreso 50
+        H1: COMO USUARIO QUIERO REGISTRAR LA ENTRADA PRODUCTOS  
+        Criterio de Aceptación:
+        1. La cantidad de la entrada de debe ser mayor a 0 
+        2. La cantidad de la entrada se le aumentará a la cantidad existente del producto
+        //El ejemplo o escenario
+        Dado El cliente tiene un producto 
+        Id 1, Nombre “Salchicha”, Categoria "Preparacion"
+        Cuando Va a ingresar una cantidad 50
+        Entonces El sistema la sumará a la cantidad existente
+        and presentará el mensaje. “La cantidad actual del producto es 50”
+         */
+        [Test]
+        public void PuedeIngresarCantidadProductosCincuentaCorrecta()
+        {
+            var productoSimple = new ProductoSimple(id: "1", nombre: "Salchicha", categoria: "PREPARACION");
+            decimal cantidadProducto = 50;
+            string respuesta = productoSimple.Ingresar(cantidadProducto: cantidadProducto);
+            Assert.AreEqual("La cantidad actual del producto es 50", respuesta);
         }
     }
 
@@ -55,8 +77,9 @@ namespace ProductoSolutionTDD
         {
             if (cantidadProducto < 0)
             {
-                return "El valor a ingresar es incorrecta";
+                return "La cantidad a ingresar es incorrecta";
             }
+            
             throw new NotImplementedException();
         }
     }
