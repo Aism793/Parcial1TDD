@@ -122,7 +122,7 @@ namespace ProductoSolutionTDD
         }
 
         /*
-       Escenario: Valor de venta 2 Producto compuesto
+       Escenario: Valor de venta 1 Producto compuesto
        H1: (3.5) COMO USUARIO QUIERO REGISTRAR LA SALIDA PRODUCTOS   
        Criterio de Aceptación:
        1. La cantidad de la salida de debe ser mayor a 0 
@@ -137,6 +137,40 @@ namespace ProductoSolutionTDD
         */
         [Test]
         public void PuedeVenderCantidadProductoCompuestoCorrecta()
+        {
+            List<ProductoSimple> productosSimples = new List<ProductoSimple>();
+            var salchicha = new ProductoSimple(id: "1", nombre: "Salchicha", categoria: "PREPARACION", costo: 1000, precio: 0);
+            salchicha.Ingresar(cantidadProducto: 30, salchicha);
+            var panPerro = new ProductoSimple(id: "2", nombre: "PanPerros", categoria: "PREPARACION", costo: 1000, precio: 0);
+            salchicha.Ingresar(cantidadProducto: 30, panPerro);
+            var laminaQueso = new ProductoSimple(id: "3", nombre: "LaminaQueso", categoria: "PREPARACION", costo: 1000, precio: 0);
+            salchicha.Ingresar(cantidadProducto: 30, laminaQueso);
+            productosSimples.Add(salchicha);
+            productosSimples.Add(panPerro);
+            productosSimples.Add(laminaQueso);
+
+            var productoCompuesto = new ProductoCompuesto(id: "4", nombre: "Perro sencillo", categoria: "PREPARADOS");
+            int cantidadVenta = 1;
+            string respuesta = productoCompuesto.Vender(cantidadProducto: cantidadVenta, precio: 5000, productoSimples: productosSimples);
+            Assert.AreEqual("El costo total es 3000 pesos", respuesta);
+        }
+
+        /*
+       Escenario: Valor de venta 2 Producto compuesto
+       H1: (3.5) COMO USUARIO QUIERO REGISTRAR LA SALIDA PRODUCTOS   
+       Criterio de Aceptación:
+       1. La cantidad de la salida de debe ser mayor a 0 
+       3. En caso de un producto compuesto la cantidad de la salida se le disminuirá a la cantidad existente 
+        de cada uno de su ingrediente 
+       //El ejemplo o escenario
+       Dado El cliente va a comprar un producto 
+       Id 2, Nombre “Perro Sencillo”, Categoria "Preparado"
+       Cuando Va a vender una cantidad 2
+       Entonces El sistema disminuirá la cantidad de los productos necesarios para su elaboración
+       and presentará el mensaje. “La cantidad actual del producto es 28”
+        */
+        [Test]
+        public void PuedeVenderCantidadProductoCompuestoCorrect()
         {
             List<ProductoSimple> productosSimples = new List<ProductoSimple>();
             var salchicha = new ProductoSimple(id: "1", nombre: "Salchicha", categoria: "PREPARACION", costo: 1000, precio: 0);

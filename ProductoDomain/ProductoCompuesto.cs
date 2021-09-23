@@ -60,7 +60,7 @@ namespace ProductoDomain
                     }
                     
                 }
-                return $"El costo total es {total} pesos";
+                return $"El costo total es {total * cantidadProducto} pesos";
             }
             throw new NotImplementedException();
         }
