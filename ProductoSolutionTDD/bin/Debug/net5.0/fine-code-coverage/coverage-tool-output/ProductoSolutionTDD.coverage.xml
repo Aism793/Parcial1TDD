@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<coverage line-rate="0.8648" branch-rate="0.75" version="1.9" timestamp="1632416271" lines-covered="32" lines-valid="37" branches-covered="3" branches-valid="4">
+<coverage line-rate="0.9285" branch-rate="0.75" version="1.9" timestamp="1632417379" lines-covered="52" lines-valid="56" branches-covered="3" branches-valid="4">
   <sources>
     <source>D:\IsmaPCBlanco\Documentos\ISMA\Semestre 2021-2\Diseño dirigido por pruebas\Proyectos\Parcial\ProductoSolutionTDD\</source>
     <source>C:\</source>
   </sources>
   <packages>
-    <package name="ProductoDomain" line-rate="0.826" branch-rate="0.75" complexity="12">
+    <package name="ProductoDomain" line-rate="0.9615" branch-rate="0.75" complexity="12">
       <classes>
-        <class name="ProductoDomain.ProductoSimple" filename="ProductoDomain\ProductoSimple.cs" line-rate="0.826" branch-rate="0.75" complexity="12">
+        <class name="ProductoDomain.ProductoSimple" filename="ProductoDomain\ProductoSimple.cs" line-rate="0.9615" branch-rate="0.75" complexity="12">
           <methods>
             <method name="get_Id" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -24,19 +24,19 @@
                 <line number="14" hits="2" branch="False" />
               </lines>
             </method>
-            <method name="get_PrecioCompra" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_Costo" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="15" hits="0" branch="False" />
+                <line number="15" hits="2" branch="False" />
               </lines>
             </method>
-            <method name="get_PrecioVenta" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_Precio" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="16" hits="0" branch="False" />
+                <line number="16" hits="2" branch="False" />
               </lines>
             </method>
-            <method name="get_Utilidad" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_Utilidad" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="17" hits="0" branch="False" />
+                <line number="17" hits="2" branch="False" />
               </lines>
             </method>
             <method name="get_Cantidad" signature="()" line-rate="1" branch-rate="1" complexity="1">
@@ -46,27 +46,27 @@
             </method>
             <method name="Ingresar" signature="(System.Int32)" line-rate="0.9" branch-rate="0.75" complexity="4">
               <lines>
-                <line number="28" hits="3" branch="False" />
-                <line number="29" hits="3" branch="True" condition-coverage="100% (2/2)">
+                <line number="31" hits="3" branch="False" />
+                <line number="32" hits="3" branch="True" condition-coverage="100% (2/2)">
                   <conditions>
                     <condition number="10" type="jump" coverage="100%" />
                   </conditions>
                 </line>
-                <line number="30" hits="1" branch="False" />
-                <line number="31" hits="1" branch="False" />
-                <line number="33" hits="2" branch="True" condition-coverage="50% (1/2)">
+                <line number="33" hits="1" branch="False" />
+                <line number="34" hits="1" branch="False" />
+                <line number="36" hits="2" branch="True" condition-coverage="50% (1/2)">
                   <conditions>
                     <condition number="27" type="jump" coverage="50%" />
                   </conditions>
                 </line>
-                <line number="34" hits="2" branch="False" />
-                <line number="35" hits="2" branch="False" />
-                <line number="36" hits="2" branch="False" />
-                <line number="38" hits="0" branch="False" />
-                <line number="39" hits="3" branch="False" />
+                <line number="37" hits="2" branch="False" />
+                <line number="38" hits="2" branch="False" />
+                <line number="39" hits="2" branch="False" />
+                <line number="41" hits="0" branch="False" />
+                <line number="42" hits="3" branch="False" />
               </lines>
             </method>
-            <method name=".ctor" signature="(System.String,System.String,System.String)" line-rate="1" branch-rate="1" complexity="1">
+            <method name=".ctor" signature="(System.String,System.String,System.String,System.Decimal,System.Decimal)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
                 <line number="20" hits="2" branch="False" />
                 <line number="21" hits="2" branch="False" />
@@ -74,6 +74,9 @@
                 <line number="23" hits="2" branch="False" />
                 <line number="24" hits="2" branch="False" />
                 <line number="25" hits="2" branch="False" />
+                <line number="26" hits="2" branch="False" />
+                <line number="27" hits="2" branch="False" />
+                <line number="28" hits="2" branch="False" />
               </lines>
             </method>
           </methods>
@@ -81,39 +84,42 @@
             <line number="12" hits="2" branch="False" />
             <line number="13" hits="2" branch="False" />
             <line number="14" hits="2" branch="False" />
-            <line number="15" hits="0" branch="False" />
-            <line number="16" hits="0" branch="False" />
-            <line number="17" hits="0" branch="False" />
+            <line number="15" hits="2" branch="False" />
+            <line number="16" hits="2" branch="False" />
+            <line number="17" hits="2" branch="False" />
             <line number="18" hits="6" branch="False" />
-            <line number="28" hits="3" branch="False" />
-            <line number="29" hits="3" branch="True" condition-coverage="100% (2/2)">
+            <line number="31" hits="3" branch="False" />
+            <line number="32" hits="3" branch="True" condition-coverage="100% (2/2)">
               <conditions>
                 <condition number="10" type="jump" coverage="100%" />
               </conditions>
             </line>
-            <line number="30" hits="1" branch="False" />
-            <line number="31" hits="1" branch="False" />
-            <line number="33" hits="2" branch="True" condition-coverage="50% (1/2)">
+            <line number="33" hits="1" branch="False" />
+            <line number="34" hits="1" branch="False" />
+            <line number="36" hits="2" branch="True" condition-coverage="50% (1/2)">
               <conditions>
                 <condition number="27" type="jump" coverage="50%" />
               </conditions>
             </line>
-            <line number="34" hits="2" branch="False" />
-            <line number="35" hits="2" branch="False" />
-            <line number="36" hits="2" branch="False" />
-            <line number="38" hits="0" branch="False" />
-            <line number="39" hits="3" branch="False" />
+            <line number="37" hits="2" branch="False" />
+            <line number="38" hits="2" branch="False" />
+            <line number="39" hits="2" branch="False" />
+            <line number="41" hits="0" branch="False" />
+            <line number="42" hits="3" branch="False" />
             <line number="20" hits="2" branch="False" />
             <line number="21" hits="2" branch="False" />
             <line number="22" hits="2" branch="False" />
             <line number="23" hits="2" branch="False" />
             <line number="24" hits="2" branch="False" />
             <line number="25" hits="2" branch="False" />
+            <line number="26" hits="2" branch="False" />
+            <line number="27" hits="2" branch="False" />
+            <line number="28" hits="2" branch="False" />
           </lines>
         </class>
       </classes>
     </package>
-    <package name="ProductoSolutionTDD" line-rate="0.9285" branch-rate="1" complexity="3">
+    <package name="ProductoSolutionTDD" line-rate="0.9" branch-rate="1" complexity="6">
       <classes>
         <class name="AutoGeneratedProgram" filename="Users\USER\.nuget\packages\microsoft.net.test.sdk\16.9.4\build\netcoreapp2.1\Microsoft.NET.Test.Sdk.Program.cs" line-rate="0" branch-rate="1" complexity="1">
           <methods>
@@ -127,7 +133,7 @@
             <line number="4" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="ProductoSolutionTDD.ProductoSolutionTest" filename="ProductoSolutionTDD\ProductoSolutionTest.cs" line-rate="1" branch-rate="1" complexity="2">
+        <class name="ProductoSolutionTDD.ProductoSolutionTest" filename="ProductoSolutionTDD\ProductoSolutionTest.cs" line-rate="0.8946999999999999" branch-rate="1" complexity="3">
           <methods>
             <method name="NoPuedeIngresarCantidadProductosDeMenosUno" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -150,6 +156,16 @@
                 <line number="57" hits="1" branch="False" />
               </lines>
             </method>
+            <method name="NoPuedeVenderCantidadProductosDeMenosUno" signature="()" line-rate="0.6666" branch-rate="1" complexity="1">
+              <lines>
+                <line number="90" hits="1" branch="False" />
+                <line number="91" hits="1" branch="False" />
+                <line number="92" hits="1" branch="False" />
+                <line number="93" hits="1" branch="False" />
+                <line number="94" hits="0" branch="False" />
+                <line number="95" hits="0" branch="False" />
+              </lines>
+            </method>
           </methods>
           <lines>
             <line number="29" hits="1" branch="False" />
@@ -165,6 +181,46 @@
             <line number="55" hits="1" branch="False" />
             <line number="56" hits="1" branch="False" />
             <line number="57" hits="1" branch="False" />
+            <line number="90" hits="1" branch="False" />
+            <line number="91" hits="1" branch="False" />
+            <line number="92" hits="1" branch="False" />
+            <line number="93" hits="1" branch="False" />
+            <line number="94" hits="0" branch="False" />
+            <line number="95" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="ProductoSolutionTDD.ProductoCompuesto" filename="ProductoSolutionTDD\ProductoSolutionTest.cs" line-rate="1" branch-rate="1" complexity="2">
+          <methods>
+            <method name="Vender" signature="(System.Int32)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="116" hits="1" branch="False" />
+                <line number="117" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(System.String,System.String,System.String,System.Int32,System.Int32)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="106" hits="1" branch="False" />
+                <line number="107" hits="1" branch="False" />
+                <line number="108" hits="1" branch="False" />
+                <line number="109" hits="1" branch="False" />
+                <line number="110" hits="1" branch="False" />
+                <line number="111" hits="1" branch="False" />
+                <line number="112" hits="1" branch="False" />
+                <line number="113" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="116" hits="1" branch="False" />
+            <line number="117" hits="1" branch="False" />
+            <line number="106" hits="1" branch="False" />
+            <line number="107" hits="1" branch="False" />
+            <line number="108" hits="1" branch="False" />
+            <line number="109" hits="1" branch="False" />
+            <line number="110" hits="1" branch="False" />
+            <line number="111" hits="1" branch="False" />
+            <line number="112" hits="1" branch="False" />
+            <line number="113" hits="1" branch="False" />
           </lines>
         </class>
       </classes>
