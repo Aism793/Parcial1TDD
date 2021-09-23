@@ -29,25 +29,34 @@ namespace ProductoSolutionTDD
             var productoSimple = new ProductoSimple(id: "1", nombre: "Salchicha", categoria: "PREPARACION");
             decimal cantidadProducto = -1;
             string respuesta = productoSimple.Ingresar(cantidadProducto: cantidadProducto);
-            Assert.AreEqual("El valor a consignar es incorrecto", respuesta);
+            Assert.AreEqual("El valor a ingresar es incorrecta", respuesta);
         }
     }
 
     internal class ProductoSimple
     {
-        private string id;
-        private string nombre;
-        private string categoria;
+        //protected List<MovimientoCuenta> _movimientos;
+        public string Id { get; private set; }
+        public string Nombre { get; private set; }
+        public string Categoria { get; private set; }
+        public decimal PrecioCompra { get; private set; }
+        public decimal PrecioVenta { get; private set; }
+        public decimal Utilidad { get; private set; }
+        public int Cantidad { get; protected set; }
 
         public ProductoSimple(string id, string nombre, string categoria)
         {
-            this.id = id;
-            this.nombre = nombre;
-            this.categoria = categoria;
+            Id = id;
+            Nombre = nombre;
+            Categoria = categoria;
         }
 
         internal string Ingresar(decimal cantidadProducto)
         {
+            if (cantidadProducto < 0)
+            {
+                return "El valor a ingresar es incorrecta";
+            }
             throw new NotImplementedException();
         }
     }
